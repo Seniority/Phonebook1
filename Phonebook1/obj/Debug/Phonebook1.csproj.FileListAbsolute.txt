@@ -1,0 +1,9 @@
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\bin\Debug\Phonebook1.exe.config
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\bin\Debug\Phonebook1.exe
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\bin\Debug\Phonebook1.pdb
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.csprojResolveAssemblyReference.cache
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.Form1.resources
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.Properties.Resources.resources
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.csproj.GenerateResource.Cache
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.exe
+C:\Users\Licensed user\Desktop\Programming\C# Projects\Phonebook1\Phonebook1\obj\Debug\Phonebook1.pdb
