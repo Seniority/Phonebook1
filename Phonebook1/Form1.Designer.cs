@@ -31,22 +31,22 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
-            this.lblFirstname = new System.Windows.Forms.Label();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.txtNumber1 = new System.Windows.Forms.TextBox();
-            this.txtNumber2 = new System.Windows.Forms.TextBox();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.cbxNumType1 = new System.Windows.Forms.ComboBox();
-            this.cbxNumType2 = new System.Windows.Forms.ComboBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbxNumType4 = new System.Windows.Forms.ComboBox();
             this.cbxNumType3 = new System.Windows.Forms.ComboBox();
             this.txtNumber3 = new System.Windows.Forms.TextBox();
             this.txtNumber4 = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.cbxNumType2 = new System.Windows.Forms.ComboBox();
+            this.cbxNumType1 = new System.Windows.Forms.ComboBox();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.txtNumber2 = new System.Windows.Forms.TextBox();
+            this.txtNumber1 = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.lblFirstname = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -55,6 +55,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -100,83 +102,40 @@
             this.panel1.Size = new System.Drawing.Size(855, 114);
             this.panel1.TabIndex = 0;
             // 
-            // txtFirstname
+            // txtAddress
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(89, 3);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(157, 20);
-            this.txtFirstname.TabIndex = 1;
+            this.txtAddress.Location = new System.Drawing.Point(568, 3);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(287, 100);
+            this.txtAddress.TabIndex = 12;
             // 
-            // lblFirstname
+            // lblAddress
             // 
-            this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstname.Location = new System.Drawing.Point(3, 6);
-            this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(80, 17);
-            this.lblFirstname.TabIndex = 0;
-            this.lblFirstname.Text = "First Name:";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(498, 6);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(64, 17);
+            this.lblAddress.TabIndex = 0;
+            this.lblAddress.Text = "Address:";
             // 
-            // txtLastname
+            // lblEmail
             // 
-            this.txtLastname.Location = new System.Drawing.Point(335, 3);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(157, 20);
-            this.txtLastname.TabIndex = 2;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(37, 84);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(46, 17);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email:";
             // 
-            // txtNumber1
+            // txtEmail
             // 
-            this.txtNumber1.Location = new System.Drawing.Point(89, 29);
-            this.txtNumber1.Name = "txtNumber1";
-            this.txtNumber1.Size = new System.Drawing.Size(157, 20);
-            this.txtNumber1.TabIndex = 4;
-            // 
-            // txtNumber2
-            // 
-            this.txtNumber2.Location = new System.Drawing.Point(335, 31);
-            this.txtNumber2.Name = "txtNumber2";
-            this.txtNumber2.Size = new System.Drawing.Size(157, 20);
-            this.txtNumber2.TabIndex = 6;
-            // 
-            // lblLastname
-            // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(252, 6);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(80, 17);
-            this.lblLastname.TabIndex = 0;
-            this.lblLastname.Text = "Last Name:";
-            // 
-            // cbxNumType1
-            // 
-            this.cbxNumType1.DisplayMember = "0";
-            this.cbxNumType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNumType1.FormattingEnabled = true;
-            this.cbxNumType1.Items.AddRange(new object[] {
-            "Phone",
-            "Mobile",
-            "Work",
-            "Fax"});
-            this.cbxNumType1.Location = new System.Drawing.Point(6, 29);
-            this.cbxNumType1.Name = "cbxNumType1";
-            this.cbxNumType1.Size = new System.Drawing.Size(77, 21);
-            this.cbxNumType1.TabIndex = 3;
-            // 
-            // cbxNumType2
-            // 
-            this.cbxNumType2.DisplayMember = "1";
-            this.cbxNumType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNumType2.FormattingEnabled = true;
-            this.cbxNumType2.Items.AddRange(new object[] {
-            "Phone",
-            "Mobile",
-            "Work",
-            "Fax"});
-            this.cbxNumType2.Location = new System.Drawing.Point(252, 29);
-            this.cbxNumType2.Name = "cbxNumType2";
-            this.cbxNumType2.Size = new System.Drawing.Size(77, 21);
-            this.cbxNumType2.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(89, 83);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(403, 20);
+            this.txtEmail.TabIndex = 11;
             // 
             // cbxNumType4
             // 
@@ -188,7 +147,7 @@
             "Mobile",
             "Work",
             "Fax"});
-            this.cbxNumType4.Location = new System.Drawing.Point(252, 56);
+            this.cbxNumType4.Location = new System.Drawing.Point(255, 54);
             this.cbxNumType4.Name = "cbxNumType4";
             this.cbxNumType4.Size = new System.Drawing.Size(77, 21);
             this.cbxNumType4.TabIndex = 9;
@@ -210,52 +169,111 @@
             // 
             // txtNumber3
             // 
-            this.txtNumber3.Location = new System.Drawing.Point(89, 56);
+            this.txtNumber3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNumber3.Location = new System.Drawing.Point(89, 54);
             this.txtNumber3.Name = "txtNumber3";
             this.txtNumber3.Size = new System.Drawing.Size(157, 20);
             this.txtNumber3.TabIndex = 8;
+            this.txtNumber3.Text = "Other";
+            this.txtNumber3.Enter += new System.EventHandler(this.txtNumber3_Enter);
+            this.txtNumber3.Leave += new System.EventHandler(this.txtNumber3_Leave);
             // 
             // txtNumber4
             // 
+            this.txtNumber4.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumber4.Location = new System.Drawing.Point(335, 56);
             this.txtNumber4.Name = "txtNumber4";
             this.txtNumber4.Size = new System.Drawing.Size(157, 20);
             this.txtNumber4.TabIndex = 10;
+            this.txtNumber4.Text = "Fax";
+            this.txtNumber4.Enter += new System.EventHandler(this.txtNumber4_Enter);
+            this.txtNumber4.Leave += new System.EventHandler(this.txtNumber4_Leave);
             // 
-            // lblEmail
+            // cbxNumType2
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(37, 84);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(46, 17);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "Email:";
+            this.cbxNumType2.DisplayMember = "1";
+            this.cbxNumType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNumType2.FormattingEnabled = true;
+            this.cbxNumType2.Items.AddRange(new object[] {
+            "Phone",
+            "Mobile",
+            "Work",
+            "Fax"});
+            this.cbxNumType2.Location = new System.Drawing.Point(255, 29);
+            this.cbxNumType2.Name = "cbxNumType2";
+            this.cbxNumType2.Size = new System.Drawing.Size(77, 21);
+            this.cbxNumType2.TabIndex = 5;
             // 
-            // txtEmail
+            // cbxNumType1
             // 
-            this.txtEmail.Location = new System.Drawing.Point(89, 83);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(403, 20);
-            this.txtEmail.TabIndex = 11;
+            this.cbxNumType1.DisplayMember = "0";
+            this.cbxNumType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNumType1.FormattingEnabled = true;
+            this.cbxNumType1.Items.AddRange(new object[] {
+            "Phone",
+            "Mobile",
+            "Work",
+            "Fax"});
+            this.cbxNumType1.Location = new System.Drawing.Point(6, 29);
+            this.cbxNumType1.Name = "cbxNumType1";
+            this.cbxNumType1.Size = new System.Drawing.Size(77, 21);
+            this.cbxNumType1.TabIndex = 3;
             // 
-            // lblAddress
+            // lblLastname
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(498, 6);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 17);
-            this.lblAddress.TabIndex = 0;
-            this.lblAddress.Text = "Address:";
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastname.Location = new System.Drawing.Point(252, 6);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(80, 17);
+            this.lblLastname.TabIndex = 0;
+            this.lblLastname.Text = "Last Name:";
             // 
-            // txtAddress
+            // txtNumber2
             // 
-            this.txtAddress.Location = new System.Drawing.Point(568, 3);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(287, 100);
-            this.txtAddress.TabIndex = 12;
+            this.txtNumber2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNumber2.Location = new System.Drawing.Point(335, 29);
+            this.txtNumber2.Name = "txtNumber2";
+            this.txtNumber2.Size = new System.Drawing.Size(157, 20);
+            this.txtNumber2.TabIndex = 6;
+            this.txtNumber2.Text = "Secondary Number";
+            this.txtNumber2.Enter += new System.EventHandler(this.txtNumber2_Enter);
+            this.txtNumber2.Leave += new System.EventHandler(this.txtNumber2_Leave);
+            // 
+            // txtNumber1
+            // 
+            this.txtNumber1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNumber1.Location = new System.Drawing.Point(89, 29);
+            this.txtNumber1.Name = "txtNumber1";
+            this.txtNumber1.Size = new System.Drawing.Size(157, 20);
+            this.txtNumber1.TabIndex = 4;
+            this.txtNumber1.Text = "Primary Number";
+            this.txtNumber1.Enter += new System.EventHandler(this.txtNumber1_Enter);
+            this.txtNumber1.Leave += new System.EventHandler(this.txtNumber1_Leave);
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.Location = new System.Drawing.Point(335, 3);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(157, 20);
+            this.txtLastname.TabIndex = 2;
+            // 
+            // lblFirstname
+            // 
+            this.lblFirstname.AutoSize = true;
+            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstname.Location = new System.Drawing.Point(3, 6);
+            this.lblFirstname.Name = "lblFirstname";
+            this.lblFirstname.Size = new System.Drawing.Size(80, 17);
+            this.lblFirstname.TabIndex = 0;
+            this.lblFirstname.Text = "First Name:";
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.Location = new System.Drawing.Point(89, 3);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(157, 20);
+            this.txtFirstname.TabIndex = 1;
             // 
             // txtSearch
             // 
@@ -314,15 +332,32 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.aboutToolStripMenuItem.Text = "Help";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
             // 
             // Form1
             // 
@@ -384,6 +419,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }
 
