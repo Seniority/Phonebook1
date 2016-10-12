@@ -12,14 +12,26 @@
   <xs:element name="AppData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AppData" msprop:Generator_UserDSName="AppData">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Phonebook" msprop:Generator_TableClassName="PhonebookDataTable" msprop:Generator_TableVarName="tablePhonebook" msprop:Generator_TablePropName="Phonebook" msprop:Generator_RowDeletingName="PhonebookRowDeleting" msprop:Generator_RowChangingName="PhonebookRowChanging" msprop:Generator_RowEvHandlerName="PhonebookRowChangeEventHandler" msprop:Generator_RowDeletedName="PhonebookRowDeleted" msprop:Generator_UserTableName="Phonebook" msprop:Generator_RowChangedName="PhonebookRowChanged" msprop:Generator_RowEvArgName="PhonebookRowChangeEvent" msprop:Generator_RowClassName="PhonebookRow">
+        <xs:element name="Phonebook" msprop:Generator_TableClassName="PhonebookDataTable" msprop:Generator_TableVarName="tablePhonebook" msprop:Generator_RowChangedName="PhonebookRowChanged" msprop:Generator_TablePropName="Phonebook" msprop:Generator_RowDeletingName="PhonebookRowDeleting" msprop:Generator_RowChangingName="PhonebookRowChanging" msprop:Generator_RowEvHandlerName="PhonebookRowChangeEventHandler" msprop:Generator_RowDeletedName="PhonebookRowDeleted" msprop:Generator_RowClassName="PhonebookRow" msprop:Generator_UserTableName="Phonebook" msprop:Generator_RowEvArgName="PhonebookRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
+              <xs:element name="First_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_UserColumnName="First Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Last_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnLast_Name" msprop:Generator_ColumnPropNameInRow="Last_Name" msprop:Generator_ColumnPropNameInTable="Last_NameColumn" msprop:Generator_UserColumnName="Last Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Number_x0020_1" msprop:Generator_ColumnVarNameInTable="columnNumber_1" msprop:Generator_ColumnPropNameInRow="Number_1" msprop:Generator_ColumnPropNameInTable="Number_1Column" msprop:Generator_UserColumnName="Number 1" type="xs:string" minOccurs="0" />
+              <xs:element name="Number_x0020_2" msprop:Generator_ColumnVarNameInTable="columnNumber_2" msprop:Generator_ColumnPropNameInRow="Number_2" msprop:Generator_ColumnPropNameInTable="Number_2Column" msprop:Generator_UserColumnName="Number 2" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Number_x0020_3" msprop:Generator_ColumnVarNameInTable="columnNumber_3" msprop:Generator_ColumnPropNameInRow="Number_3" msprop:Generator_ColumnPropNameInTable="Number_3Column" msprop:Generator_UserColumnName="Number 3" type="xs:string" minOccurs="0" />
+              <xs:element name="Number_x0020_4" msprop:Generator_ColumnVarNameInTable="columnNumber_4" msprop:Generator_ColumnPropNameInRow="Number_4" msprop:Generator_ColumnPropNameInTable="Number_4Column" msprop:Generator_UserColumnName="Number 4" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="PhonebookKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Phonebook" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

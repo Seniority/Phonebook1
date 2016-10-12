@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,14 +53,41 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.phonebookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new Phonebook1.AppData();
+            this.phonebookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.phonebookBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource7)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -70,14 +98,31 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoGenerateColumns = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.number1DataGridViewTextBoxColumn,
+            this.number2DataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.iDDataGridViewTextBoxColumn,
+            this.number3DataGridViewTextBoxColumn,
+            this.number4DataGridViewTextBoxColumn});
+            this.dataGridView.DataSource = this.phonebookBindingSource;
             this.dataGridView.Location = new System.Drawing.Point(12, 173);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(855, 300);
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
             // 
             // panel1
             // 
@@ -104,6 +149,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Address", true));
             this.txtAddress.Location = new System.Drawing.Point(568, 3);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -132,6 +178,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Email", true));
             this.txtEmail.Location = new System.Drawing.Point(89, 83);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(403, 20);
@@ -143,10 +190,12 @@
             this.cbxNumType4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNumType4.FormattingEnabled = true;
             this.cbxNumType4.Items.AddRange(new object[] {
+            "-Type-",
             "Phone",
             "Mobile",
-            "Work",
-            "Fax"});
+            "Business/Office",
+            "Fax",
+            "Other"});
             this.cbxNumType4.Location = new System.Drawing.Point(255, 54);
             this.cbxNumType4.Name = "cbxNumType4";
             this.cbxNumType4.Size = new System.Drawing.Size(77, 21);
@@ -158,10 +207,12 @@
             this.cbxNumType3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNumType3.FormattingEnabled = true;
             this.cbxNumType3.Items.AddRange(new object[] {
+            "-Type-",
             "Phone",
             "Mobile",
-            "Work",
-            "Fax"});
+            "Business/Office",
+            "Fax",
+            "Other"});
             this.cbxNumType3.Location = new System.Drawing.Point(6, 54);
             this.cbxNumType3.Name = "cbxNumType3";
             this.cbxNumType3.Size = new System.Drawing.Size(77, 21);
@@ -169,6 +220,7 @@
             // 
             // txtNumber3
             // 
+            this.txtNumber3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Number 3", true));
             this.txtNumber3.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumber3.Location = new System.Drawing.Point(89, 54);
             this.txtNumber3.Name = "txtNumber3";
@@ -180,12 +232,13 @@
             // 
             // txtNumber4
             // 
+            this.txtNumber4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Number 4", true));
             this.txtNumber4.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumber4.Location = new System.Drawing.Point(335, 56);
             this.txtNumber4.Name = "txtNumber4";
             this.txtNumber4.Size = new System.Drawing.Size(157, 20);
             this.txtNumber4.TabIndex = 10;
-            this.txtNumber4.Text = "Fax";
+            this.txtNumber4.Text = "Other";
             this.txtNumber4.Enter += new System.EventHandler(this.txtNumber4_Enter);
             this.txtNumber4.Leave += new System.EventHandler(this.txtNumber4_Leave);
             // 
@@ -195,10 +248,12 @@
             this.cbxNumType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNumType2.FormattingEnabled = true;
             this.cbxNumType2.Items.AddRange(new object[] {
+            "-Type-",
             "Phone",
             "Mobile",
-            "Work",
-            "Fax"});
+            "Business/Office",
+            "Fax",
+            "Other"});
             this.cbxNumType2.Location = new System.Drawing.Point(255, 29);
             this.cbxNumType2.Name = "cbxNumType2";
             this.cbxNumType2.Size = new System.Drawing.Size(77, 21);
@@ -210,10 +265,12 @@
             this.cbxNumType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNumType1.FormattingEnabled = true;
             this.cbxNumType1.Items.AddRange(new object[] {
+            "-Type-",
             "Phone",
             "Mobile",
-            "Work",
-            "Fax"});
+            "Business/Office",
+            "Fax",
+            "Other"});
             this.cbxNumType1.Location = new System.Drawing.Point(6, 29);
             this.cbxNumType1.Name = "cbxNumType1";
             this.cbxNumType1.Size = new System.Drawing.Size(77, 21);
@@ -231,6 +288,7 @@
             // 
             // txtNumber2
             // 
+            this.txtNumber2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Number 2", true));
             this.txtNumber2.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumber2.Location = new System.Drawing.Point(335, 29);
             this.txtNumber2.Name = "txtNumber2";
@@ -242,6 +300,7 @@
             // 
             // txtNumber1
             // 
+            this.txtNumber1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Number 1", true));
             this.txtNumber1.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumber1.Location = new System.Drawing.Point(89, 29);
             this.txtNumber1.Name = "txtNumber1";
@@ -253,6 +312,7 @@
             // 
             // txtLastname
             // 
+            this.txtLastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Last Name", true));
             this.txtLastname.Location = new System.Drawing.Point(335, 3);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(157, 20);
@@ -270,6 +330,7 @@
             // 
             // txtFirstname
             // 
+            this.txtFirstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "First Name", true));
             this.txtFirstname.Location = new System.Drawing.Point(89, 3);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(157, 20);
@@ -281,6 +342,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(766, 20);
             this.txtSearch.TabIndex = 13;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // btnSave
             // 
@@ -290,6 +352,7 @@
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -299,6 +362,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -308,6 +372,7 @@
             this.btnNew.TabIndex = 14;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // lblSearch
             // 
@@ -319,16 +384,16 @@
             this.lblSearch.TabIndex = 0;
             this.lblSearch.Text = "Search:";
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.aboutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(879, 24);
-            this.menuStrip1.TabIndex = 18;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(879, 24);
+            this.menuStrip.TabIndex = 18;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -338,6 +403,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -346,18 +418,124 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem1.Text = "About";
+            // 
+            // phonebookBindingSource
+            // 
+            this.phonebookBindingSource.DataMember = "Phonebook";
+            this.phonebookBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // phonebookBindingSource1
+            // 
+            this.phonebookBindingSource1.DataMember = "Phonebook";
+            this.phonebookBindingSource1.DataSource = this.appData;
+            // 
+            // phonebookBindingSource2
+            // 
+            this.phonebookBindingSource2.DataMember = "Phonebook";
+            this.phonebookBindingSource2.DataSource = this.appData;
+            // 
+            // phonebookBindingSource3
+            // 
+            this.phonebookBindingSource3.DataMember = "Phonebook";
+            this.phonebookBindingSource3.DataSource = this.appData;
+            // 
+            // phonebookBindingSource4
+            // 
+            this.phonebookBindingSource4.DataMember = "Phonebook";
+            this.phonebookBindingSource4.DataSource = this.appData;
+            // 
+            // phonebookBindingSource5
+            // 
+            this.phonebookBindingSource5.DataMember = "Phonebook";
+            this.phonebookBindingSource5.DataSource = this.appData;
+            // 
+            // phonebookBindingSource6
+            // 
+            this.phonebookBindingSource6.DataMember = "Phonebook";
+            this.phonebookBindingSource6.DataSource = this.appData;
+            // 
+            // phonebookBindingSource7
+            // 
+            this.phonebookBindingSource7.DataMember = "Phonebook";
+            this.phonebookBindingSource7.DataSource = this.appData;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // number1DataGridViewTextBoxColumn
+            // 
+            this.number1DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.number1DataGridViewTextBoxColumn.DataPropertyName = "Number 1";
+            this.number1DataGridViewTextBoxColumn.HeaderText = "Number 1";
+            this.number1DataGridViewTextBoxColumn.Name = "number1DataGridViewTextBoxColumn";
+            this.number1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // number2DataGridViewTextBoxColumn
+            // 
+            this.number2DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.number2DataGridViewTextBoxColumn.DataPropertyName = "Number 2";
+            this.number2DataGridViewTextBoxColumn.HeaderText = "Number 2";
+            this.number2DataGridViewTextBoxColumn.Name = "number2DataGridViewTextBoxColumn";
+            this.number2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // number3DataGridViewTextBoxColumn
+            // 
+            this.number3DataGridViewTextBoxColumn.DataPropertyName = "Number 3";
+            this.number3DataGridViewTextBoxColumn.HeaderText = "Number 3";
+            this.number3DataGridViewTextBoxColumn.Name = "number3DataGridViewTextBoxColumn";
+            this.number3DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // number4DataGridViewTextBoxColumn
+            // 
+            this.number4DataGridViewTextBoxColumn.DataPropertyName = "Number 4";
+            this.number4DataGridViewTextBoxColumn.HeaderText = "Number 4";
+            this.number4DataGridViewTextBoxColumn.Name = "number4DataGridViewTextBoxColumn";
+            this.number4DataGridViewTextBoxColumn.Visible = false;
             // 
             // Form1
             // 
@@ -372,19 +550,29 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phonebook";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,11 +604,29 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.BindingSource phonebookBindingSource7;
+        private AppData appData;
+        private System.Windows.Forms.BindingSource phonebookBindingSource6;
+        private System.Windows.Forms.BindingSource phonebookBindingSource4;
+        private System.Windows.Forms.BindingSource phonebookBindingSource5;
+        private System.Windows.Forms.BindingSource phonebookBindingSource3;
+        private System.Windows.Forms.BindingSource phonebookBindingSource2;
+        private System.Windows.Forms.BindingSource phonebookBindingSource1;
+        private System.Windows.Forms.BindingSource phonebookBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number4DataGridViewTextBoxColumn;
     }
 }
 
