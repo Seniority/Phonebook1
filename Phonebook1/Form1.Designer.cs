@@ -31,6 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonebookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new Phonebook1.AppData();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -58,8 +69,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.phonebookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.appData = new Phonebook1.AppData();
             this.phonebookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.phonebookBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.phonebookBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -67,20 +76,11 @@
             this.phonebookBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.phonebookBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.phonebookBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource3)).BeginInit();
@@ -123,6 +123,84 @@
             this.dataGridView.Size = new System.Drawing.Size(855, 300);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // number1DataGridViewTextBoxColumn
+            // 
+            this.number1DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.number1DataGridViewTextBoxColumn.DataPropertyName = "Number 1";
+            this.number1DataGridViewTextBoxColumn.HeaderText = "Number 1";
+            this.number1DataGridViewTextBoxColumn.Name = "number1DataGridViewTextBoxColumn";
+            this.number1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // number2DataGridViewTextBoxColumn
+            // 
+            this.number2DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.number2DataGridViewTextBoxColumn.DataPropertyName = "Number 2";
+            this.number2DataGridViewTextBoxColumn.HeaderText = "Number 2";
+            this.number2DataGridViewTextBoxColumn.Name = "number2DataGridViewTextBoxColumn";
+            this.number2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // number3DataGridViewTextBoxColumn
+            // 
+            this.number3DataGridViewTextBoxColumn.DataPropertyName = "Number 3";
+            this.number3DataGridViewTextBoxColumn.HeaderText = "Number 3";
+            this.number3DataGridViewTextBoxColumn.Name = "number3DataGridViewTextBoxColumn";
+            this.number3DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // number4DataGridViewTextBoxColumn
+            // 
+            this.number4DataGridViewTextBoxColumn.DataPropertyName = "Number 4";
+            this.number4DataGridViewTextBoxColumn.HeaderText = "Number 4";
+            this.number4DataGridViewTextBoxColumn.Name = "number4DataGridViewTextBoxColumn";
+            this.number4DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // phonebookBindingSource
+            // 
+            this.phonebookBindingSource.DataMember = "Phonebook";
+            this.phonebookBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -424,16 +502,6 @@
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             // 
-            // phonebookBindingSource
-            // 
-            this.phonebookBindingSource.DataMember = "Phonebook";
-            this.phonebookBindingSource.DataSource = this.appData;
-            // 
-            // appData
-            // 
-            this.appData.DataSetName = "AppData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // phonebookBindingSource1
             // 
             this.phonebookBindingSource1.DataMember = "Phonebook";
@@ -469,74 +537,6 @@
             this.phonebookBindingSource7.DataMember = "Phonebook";
             this.phonebookBindingSource7.DataSource = this.appData;
             // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // number1DataGridViewTextBoxColumn
-            // 
-            this.number1DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.number1DataGridViewTextBoxColumn.DataPropertyName = "Number 1";
-            this.number1DataGridViewTextBoxColumn.HeaderText = "Number 1";
-            this.number1DataGridViewTextBoxColumn.Name = "number1DataGridViewTextBoxColumn";
-            this.number1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // number2DataGridViewTextBoxColumn
-            // 
-            this.number2DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.number2DataGridViewTextBoxColumn.DataPropertyName = "Number 2";
-            this.number2DataGridViewTextBoxColumn.HeaderText = "Number 2";
-            this.number2DataGridViewTextBoxColumn.Name = "number2DataGridViewTextBoxColumn";
-            this.number2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // number3DataGridViewTextBoxColumn
-            // 
-            this.number3DataGridViewTextBoxColumn.DataPropertyName = "Number 3";
-            this.number3DataGridViewTextBoxColumn.HeaderText = "Number 3";
-            this.number3DataGridViewTextBoxColumn.Name = "number3DataGridViewTextBoxColumn";
-            this.number3DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // number4DataGridViewTextBoxColumn
-            // 
-            this.number4DataGridViewTextBoxColumn.DataPropertyName = "Number 4";
-            this.number4DataGridViewTextBoxColumn.HeaderText = "Number 4";
-            this.number4DataGridViewTextBoxColumn.Name = "number4DataGridViewTextBoxColumn";
-            this.number4DataGridViewTextBoxColumn.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,12 +560,12 @@
             this.Text = "Phonebook";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource3)).EndInit();

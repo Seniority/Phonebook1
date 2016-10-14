@@ -131,6 +131,14 @@ namespace Phonebook1
             }
         }
 
+        /*---------------------------------------------------------- Phonebook Data and Data Editing ----------------------------------------------------------*/
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        // btnNew
         private void btnNew_Click(object sender, EventArgs e)
         {
             try
@@ -139,21 +147,34 @@ namespace Phonebook1
                 App.Phonebook.AddPhonebookRow(App.Phonebook.NewPhonebookRow());
                 phonebookBindingSource.MoveLast();
                 txtFirstname.Focus();
+                txtNumber1.Text = "Primary Number";
+                txtNumber1.ForeColor = SystemColors.ScrollBar;
+                txtNumber2.Text = "Secondary Number";
+                txtNumber2.ForeColor = SystemColors.ScrollBar;
+                txtNumber3.Text = "Other";
+                txtNumber3.ForeColor = SystemColors.ScrollBar;
+                txtNumber4.Text = "Other";
+                txtNumber4.ForeColor = SystemColors.ScrollBar;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 App.Phonebook.RejectChanges();
-            }
-            
+            }            
         }
 
+        //btn Edit
         private void btnEdit_Click(object sender, EventArgs e)
         {
             panel1.Enabled = true;
             txtFirstname.Focus();
+            txtNumber1.ForeColor = Color.Black;
+            txtNumber2.ForeColor = Color.Black;
+            txtNumber3.ForeColor = Color.Black;
+            txtNumber4.ForeColor = Color.Black;
         }
 
+        // btnSave
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -162,13 +183,15 @@ namespace Phonebook1
                 App.Phonebook.AcceptChanges();
                 App.Phonebook.WriteXml(string.Format("{0}//data.dat", Application.StartupPath));
                 panel1.Enabled = false;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 App.Phonebook.RejectChanges();
             }
         }
 
+        // btnCancel
         private void btnCancel_Click(object sender, EventArgs e)
         {
             phonebookBindingSource.ResetBindings(false);
@@ -179,16 +202,13 @@ namespace Phonebook1
         {
             if (e.KeyCode == Keys.Delete)
             {
-                if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Confirm Change", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     phonebookBindingSource.RemoveCurrent();
                 }
             }
         }
+        
 
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-                        
-        }
     } //end Class
 } //end Namespace
